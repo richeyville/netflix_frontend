@@ -33,9 +33,6 @@ jobs:
 
     - name: Docker build 
       run: |
-        echo "${{ vars.env }}" > .env
-        # ls -la 
-        # cat application.propertie
         docker build -t netflix_frontend:latest .
 
     - name: Docker push
