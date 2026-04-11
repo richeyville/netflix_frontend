@@ -81,7 +81,7 @@ src/api/axiosConfig.js
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://{your-backend-url}/api',
+    baseURL: 'http://{your-backend-url}',
     headers: {
         'Content-Type': 'application/json',
     },
@@ -93,7 +93,7 @@ export default axios.create({
 Replace:
 
 ```javascript
-https://{your-backend-url}:8080/api
+http://{your-backend-url}:8080
 ```
 
 With your actual backend URL, for example:
