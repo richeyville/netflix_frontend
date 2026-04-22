@@ -38,14 +38,14 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t $ECR_REPOSITORY:latest .
+        docker build -t netflix_frontend:latest .
 
     - name: Tag Docker image
       run: |
-        docker tag $ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:${GITHUB_RUN_NUMBER}
-        docker tag $ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        docker tag netflix_frontend:latest 793524670489.dkr.ecr.us-east-2.amazonaws.com/netflix_frontend:${GITHUB_RUN_NUMBER}
+        docker tag netflix_frontend:latest 793524670489.dkr.ecr.us-east-2.amazonaws.com/netflix_frontend:latest
 
     - name: Push Docker image
       run: |
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:${GITHUB_RUN_NUMBER}
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        docker push 793524670489.dkr.ecr.us-east-2.amazonaws.com/netflix_frontend:${GITHUB_RUN_NUMBER}
+        docker push 793524670489.dkr.ecr.us-east-2.amazonaws.com/netflix_frontend:latest
