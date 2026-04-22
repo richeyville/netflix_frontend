@@ -35,7 +35,6 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v2
 
-
     - name: Docker build 
       run: |
         docker build -t netflix_frontend:latest .
